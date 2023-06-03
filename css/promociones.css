@@ -1,0 +1,70 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.navbar{
+    background-color: #ff00ff !important;
+    min-height: 100px;
+    margin-top: -38px;
+}
+.navbar-brand{
+    color: white;
+}
+.nav-link{
+    color: white;
+}
+.nav-link:hover{
+    color: crimson;
+}
+.navbar-brand:hover{
+    color: crimson;
+}
+.mymenu {
+    
+    margin-top: -44px;
+}
+img#logo-AF {
+    float: none;
+    width: 204px;
+    margin-top: 20px;
+    margin: 0 auto;
+    padding: -2px;
+    margin-left: -2px;
+}
+#galeria{
+    min-height: 90%;
+}
+#galeria .col-lg-4{
+    margin: 0 !important;
+    padding: 30px;
+}
+#galeria img{
+    width: 100%;
+    height: 300px;
+}
+#galeria img:hover{
+    border: 5px solid #f7f7f7;
+}
+#galeria h2{
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+#galeria p{
+    
+    justify-content: center;
+
+}
+#galeria h5{
+    text-align: center;
+    font-style: normal;
+}
+
+@media (max-width: 802px) {
+    #galeria img{
+        width: 400%;
+        height: 300px;
+    }
+    
+  
+}

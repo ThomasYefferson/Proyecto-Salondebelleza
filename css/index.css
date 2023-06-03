@@ -1,0 +1,494 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div#menu-superior-AF {
+
+    padding: 0;
+    margin-top: -20px;
+    background: azure;
+    line-height: 21px;
+}
+.menu-superior{
+    list-style: none;
+    padding: 15px;
+    background: white;
+    width: 100%;
+    margin: 0%;
+
+}
+.menu-superior li a{
+    text-decoration: none;
+    color: blueviolet;
+    padding: 20px;
+    display: block;
+}
+.menu-superior li{
+    display: inline-block;
+    text-align: center;
+
+}
+.menu-superior li a:hover{
+    background: fixed;
+    color: fuchsia!important;
+    
+}
+
+.mymenu {
+    
+    margin-top: -30px;
+}
+
+li.mail {
+    display: inline-flex;
+    margin-bottom: 3px;
+    padding: 8px;
+}
+a.email {
+    margin-top: -22px;
+}
+
+li.slogan {
+    color: fuchsia;
+    font-size: 18px;
+}
+
+
+.navbar{
+    background-color: #ff00ff !important;
+    min-height: 100px;
+}
+.navbar-brand{
+    color: white !important;
+}
+.nav-link{
+    color: white!important;
+}
+.nav-link:hover{
+    color: crimson !important;
+}
+.navbar-brand:hover{
+    color: crimson !important;
+}
+img.logo-AF {
+    margin-left: -60px;
+}
+.logo-AF img{
+    float: none;
+	width: 204px;
+	margin: 0px auto;
+	margin-top: 20px;
+
+}
+.mycarrusel {
+    height: 500px!important;
+}
+.btn-sucess{
+    display: block;
+	background: #e0a0e0;
+	color: white;
+	padding: 15px;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size: 13px;
+	text-decoration: none;
+	max-width: 150px;
+	transition: 300ms all;
+	border-radius: 20px;
+	cursor: pointer;
+}
+.btn-sucess{
+    background: #ff00ff;
+}
+.btn-sucess:hover{
+    background: blueviolet;
+    color: black;
+    text-decoration: none;
+    border-radius: 0;
+}
+.nosostros {
+    width: 80%;
+    height: 536px;
+    padding: 5px;
+    margin-top: 18px;
+}
+.nosostros h2{
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.nosostros-1 h2{
+    font-size: 30px;
+    line-height: 35px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+.img-services {
+    width: 330px;
+    height: 333px;
+    margin-top: 47px;
+    
+}
+.img-services:hover {
+    border-radius: 50%;
+    width: 300px;
+    height: 340px;
+
+}
+
+.box-ban-txt-3 {
+    color: #fff;
+    padding: 10px 25px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 20px;
+    top: 45px;
+    position: relative;
+    border: solid 2px #ebebed;
+    width: 172px;
+    height: 40px;
+    margin-top: -47px;
+    
+}
+.box-ban-txt-3{
+    background-color: #ff00ff;
+    
+}
+.box-ban-txt-3 a{
+    color: #fff;
+    
+}
+
+.nosostros-1 {
+    padding: 69px;
+    width: 98%;
+    margin-top: -162px;
+    margin-left: 96px;
+}
+img.img-services-1 {
+    margin-top: -88px;
+    height: 333px;
+    width: 330px;
+}
+img.img-services-1:hover{
+    border-radius: 50%;
+    width: 300px;
+    height: 340px;
+}
+.text-center.pt-5.myuñas {
+    background: #ebebed !important;
+    margin-top: 15px;
+    height: 100px;
+}
+h2.fondo-decoracion {
+    background: white;
+    width: 638px;
+    height: 70px;
+    margin-left: 207px;
+    padding: 5px;
+    margin-top: -18px;
+    color: #ff00ff;
+    
+}
+.img-uñas{
+    display: flex;
+ 
+   
+}
+
+.img{
+    width: 350px;
+    height: 300px;
+  
+}
+.img:hover{
+    border: 5px solid #f7f7f7;
+    
+}
+
+div#maquillaje {
+    min-height: 100px !important;
+    width: 100%;
+}
+img.fondo-m {
+    
+    width: 1107px;
+    margin: 5px;
+    margin-top: 90px;
+}
+iframe {
+    margin-top: 28px;
+}
+.myfooter {
+    background: fuchsia!important;
+    color: white!important;
+    margin-top: 25px;
+}
+.Iconos-AF a i{
+    display: inline-block;
+    margin: 0 5px;
+    width: 50px;
+    height: 25px;
+
+
+
+}
+p.Nosotros {
+    text-align: justify;
+}
+@media (max-width: 989px) {
+    .img-services {
+        width: 203px;
+        height: 258px;
+        margin-top: 47px;
+    }
+    img.img-services-1 {
+        margin-top: -49px;
+        height: 333px;
+        width: 330px;
+    }
+    .text-center.pt-5.myuñas {
+     
+        display: contents;
+    }
+    h2.fondo-decoracion {
+       
+        width: 638px;
+        height: 70px;
+        margin-left: -2px;
+        padding: 5px;
+        margin-top: -1px;
+        color: #ff00ff;
+    }
+    img.fondo-m {
+    
+        width: 686px;
+        margin: 5px;
+        margin-top: 90px;
+    }
+    iframe {
+        margin-top: 8px;
+        width: 680px;
+    }
+    
+    
+    
+  
+}
+@media (max-width: 908px) {
+    
+    img.img-services-1 {
+        margin-top: 223px;
+        margin-left: 148px;
+        height: 366px;
+        width: 480px;
+    }
+    .nosostros-1 {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 34px;
+        margin-left: -182px;
+    }
+    .myuñas h2 {
+        background: #ebebed !important;
+        margin-top: 15px;
+        height: 52px;
+        margin: -2px;
+    }
+    .img{
+        width: 470px;
+        height: 480px;
+        margin-top: 21px;
+    }
+    img.fondo-m {    
+        width: 677px;            
+        height: 344px;            
+        margin: 5px;            
+        margin-top: 36px;
+    }
+    iframe {
+        margin-top: 28px;
+        width: 693px;
+    }
+
+}
+  
+@media (max-width: 800px) {
+    img#logo-AF {
+        width: 204px;
+    }
+    .nosostros {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 18px;
+    }
+    .img-services {
+        width: 463px;
+        height: 366px;
+        margin-top: 486px;
+        margin-left: -361px;
+    }
+    img.img-services-1 {
+        margin-top: 223px;
+        margin-left: 148px;
+        height: 366px;
+        width: 480px;
+    }
+    .nosostros-1 {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 34px;
+        margin-left: -182px;
+    }
+  
+}
+@media (max-width: 729px) {
+    img#logo-AF {
+        width: 204px;
+    }
+    img#logo-AF {
+        width: 204px;
+    }
+    .nosostros {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 18px;
+    }
+    .img-services {
+        width: 366px;
+        height: 284px;
+        margin-top: 486px;
+        margin-left: -361px;
+    }
+    img.img-services-1 {
+        margin-top: 233px;
+        margin-left: 55px;
+        height: 321px;
+        width: 346px;
+    }
+    .nosostros-1 {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 34px;
+        margin-left: -182px;
+    }
+    
+  
+}
+@media (max-width: 512px) {
+  
+    img.logo-AF {
+        width: 50px;
+    }
+   
+    .nosostros {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 18px;
+    }
+    .img-services {
+        width: 349px;
+        height: 272px;
+        margin-top: 537px;
+        margin-left: -268px;
+    }
+    img.img-services-1 {
+        margin-top: 287px;
+        margin-left: -3px;
+        height: 295px;
+        width: 338px;
+    }
+    .nosostros-1 {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 34px;
+        margin-left: -127px;
+    }
+}
+
+@media (max-width: 480px) {
+  
+    img.logo-AF {
+        width: 50px;
+    }
+   
+    .nosostros {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 18px;
+    }
+    .img-services {
+        width: 463px;
+        height: 366px;
+        margin-top: 486px;
+        margin-left: -361px;
+    }
+    img.img-services-1 {
+        margin-top: 223px;
+        margin-left: 148px;
+        height: 366px;
+        width: 480px;
+    }
+    .nosostros-1 {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 34px;
+        margin-left: -182px;
+    }
+}
+@media (max-width: 412px) {
+  
+    img.logo-AF {
+        width: 50px;
+    }
+   
+    .nosostros {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 18px;
+    }
+    .img-services {
+        width: 349px;
+        height: 272px;
+        margin-top: 537px;
+        margin-left: -268px;
+    }
+    img.img-services-1 {
+        margin-top: 287px;
+        margin-left: -3px;
+        height: 295px;
+        width: 338px;
+    }
+    .nosostros-1 {
+        width: 156%;
+        height: 536px;
+        padding: 5px;
+        margin-top: 34px;
+        margin-left: -127px;
+    }
+}
+
+
+
+
+
+
+
+@media (max-width: 981px) {
+    div#menu-superior-AF{
+        display: none;
+    }
+    
+    
+  
+}
