@@ -1,271 +1,459 @@
-<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="es">
   <head>
-                               <!-- Required meta tags -->
-        <meta charset="utf-8"/>
-        <meta name="viewport"content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
-
-                                <!-- Bootstrap CSS-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
-        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N"
-        crossorigin="anonymous"/>
-        <link rel="stylesheet" href="css/Nuestro-trabajo.css"/>
-        <link rel="stylesheet" href="/css/index.css">
-        <script src="https://kit.fontawesome.com/76e80e420f.js" crossorigin="anonymous"></script>
-                                <!--Title-->
-        <title>Salón de belleza - AngieFashion</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Promociones - Angie Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/76e80e420f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css" />
   </head>
   <body>
-                                <!--content of the first top menu-->
-        <div id="menu-superior-AF">
-            <ul class="menu-superior">
-               <li class="slogan">Reserva tu cita</li>
-                  <i class="icon-phone"><i class="fas fa-phone me-3"></i></i>
-                    <a href="tel:3215353153">3215353153</a></li>
-                <li class="mail"><i class="fas fa-envelope me-3"></i><a class="email" href="mailto:angiefashionraices19@gmail.com ">angiefashionraices19@gmail.com</a></li>
-                    <a class="cute-ref-head" href="#!">¿Quieres trabajar con nosotros?</a>
-               <li></li>
-           </ul>
-       </div>
-                                 <!--Navegation menu-->
-           <nav class="navbar navbar-expand-lg mymenu">
-             
-                  <a class="navbar-brand" href="index.html"> <img src="images/logo.PNG" alt="logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                 <ion-icon name="menu-outline" class="icon-outline"></ion-icon>
-               </button>
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item">
-                          <a class="nav-link" href="index.html" id="home">Inicio</a>
-                        </li>
-                          <li class="nav-item">
-                        <a class="nav-link" href="Nuestro-trabajo.html" id="home">Nuestro trabajo</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="promociones.html" id="home">Promociones</a>
-                    </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="registro.html" id="home">Registro</a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="login.html" id="home">Login</a>
-                      </li>
-                  </ul>
+    <header>
+      <div class="topbar py-2">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="topbar-info text-center text-md-left mb-2 mb-md-0">
+            <span class="topbar-label">Reserva tu cita</span>
+            <a href="tel:3215353153">321 535 3153</a>
+            <span class="divider">|</span>
+            <a href="mailto:angiefashionraices19@gmail.com">angiefashionraices19@gmail.com</a>
+          </div>
+          <a class="topbar-action" href="https://api.whatsapp.com/send?phone=573215353153&text=Hola%20Angie%20Fashion%2C%20quiero%20una%20cita" target="_blank" rel="noreferrer">¿Quieres trabajar con nosotros?</a>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark menu-bar sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img id="logo-AF" src="images/logo.PNG" alt="Angie Fashion" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="Nuestro-trabajo.html">Nuestro trabajo</a></li>
+              <li class="nav-item active"><a class="nav-link" href="promociones.html">Promociones</a></li>
+              <li class="nav-item"><a class="nav-link" href="registro.html">Registro</a></li>
+              <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <section class="container">
+        <div class="section-title text-center mb-5">
+          <span>Promociones</span>
+          <h2>Descuentos especiales</h2>
+          <p>Las mejores promociones para cuidar tu imagen sin salir de Buenaventura.</p>
+        </div>
+        
+        <div class="row" id="promoContainer">
+          <!-- Las promociones se cargarán aquí con JavaScript -->
+          <div class="col-12">
+            <div class="alert alert-info">Cargando promociones...</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panel de Carrito Flotante -->
+      <div class="services-cart" id="cartPanel" style="display: none;">
+        <div class="cart-header">
+          <h4>Tu Cita</h4>
+          <button class="btn-close-cart" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-body">
+          <div id="selectedServicesList">
+            <p style="color: #999; text-align: center;">Selecciona un servicio</p>
+          </div>
+          <div class="cart-summary">
+            <div class="summary-row">
+              <span>Subtotal:</span>
+              <span id="subtotal">$0</span>
+            </div>
+            <div class="summary-row">
+              <label for="discountSelect">Descuento:</label>
+              <select id="discountSelect" class="form-control form-control-sm">
+                <option value="0">Sin descuento</option>
+                <option value="5">5% descuento</option>
+                <option value="10">10% descuento</option>
+                <option value="15">15% descuento</option>
+                <option value="20">20% descuento</option>
+              </select>
+            </div>
+            <div class="summary-row" id="discountAmountRow" style="display: none;">
+              <span>Descuento:</span>
+              <span id="discountAmount">-$0</span>
+            </div>
+            <div class="summary-row total">
+              <span>Total a pagar:</span>
+              <span id="totalPrice">$0</span>
+            </div>
+          </div>
+          <button class="btn btn-success btn-block mt-3" id="reserveBtn" onclick="reserveService()">Reservar ahora</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-5 text-white">
+      <div class="container text-center">
+        <p>Reserva tu promoción favorita y luce espectacular.</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    
+    <script>
+      let cartItems = [];
+      let promociones = [];
+
+      // Cargar promociones desde localStorage
+      function cargarPromociones() {
+        const promosStorage = localStorage.getItem("promociones");
+        promociones = promosStorage ? JSON.parse(promosStorage) : [];
+        mostrarPromociones();
+      }
+
+      // Mostrar promociones
+      function mostrarPromociones() {
+        const container = document.getElementById('promoContainer');
+        
+        if (promociones.length === 0) {
+          container.innerHTML = '<div class="col-12"><div class="alert alert-info">No hay promociones disponibles por el momento. Vuelve pronto.</div></div>';
+          return;
+        }
+
+        container.innerHTML = promociones.map(promo => `
+          <div class="col-md-6 col-lg-4 mb-4">
+            <div class="promo-card shadow-sm rounded overflow-hidden service-card-item" data-service="${promo.nombre}" data-price="${promo.precio}">
+              ${promo.imagen ? `<img src="${promo.imagen}" alt="${promo.nombre}" class="img-fluid" />` : '<div style="height: 250px; background: var(--light); display: flex; align-items: center; justify-content: center;"><span style="color: var(--muted);">Sin imagen</span></div>'}
+              <div class="card-body">
+                <h5>${promo.nombre}</h5>
+                <p class="service-price">$${promo.precio.toLocaleString('es-CO')}</p>
+                <button class="btn btn-sm btn-primary select-service" style="width: 100%; margin-top: 0.5rem;">Seleccionar</button>
               </div>
             </div>
-        </nav>
+          </div>
+        `).join('');
 
-                            <!--Content website AngieFashion-->
-                            <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-                                <ol class="carousel-indicators">
-                                  <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-                                  <li data-target="#carouselExampleCaptions" data-slide-to="1" ></li>
-                                  <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                  <div class="carousel-item active">
-                                    <img src="images/carrusel-angie1.png" class="d-block w-100 mycarrusel" alt="carrusel-angie1">
-                                      <div class="carousel-caption d-none d-md-block">
-                                        <h2>Angie Fashion</h2>
-                                        <p>Belleza desde tus raices.</p>
-                                      </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/carrusel-angie2.png" class="d-block w-100 mycarrusel" alt="carrusel-angie2">
-                                      <div class="carousel-caption d-none d-md-block">
-                                        <h2>Angie Fashion</h2>
-                                        <p>Deja que la vida te despeine.</p>
-                                  </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="images/carrusel-angie3.jpg" class="d-block w-100 mycarrusel" alt="carrusel-angie3">
-                                      <div class="carousel-caption d-none d-md-block">
-                                        <h2>Angie Fashion</h2>
-                                        <p>Tip de belleza de hoy: Cree en tí.</p>
-                                      </div>
-                                  </div>
-                              </div>
-                              <button class="carousel-control-prev" type="button" data-target="#carouselExampleCaptions" data-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                              </button>
-                              <button class="carousel-control-next" type="button" data-target="#carouselExampleCaptions" data-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                              </button>
-                        </div> 
+        // Agregar event listeners a los botones
+        document.querySelectorAll('.select-service').forEach(btn => {
+          btn.addEventListener('click', seleccionarServicio);
+        });
+      }
 
-                        <!---Contenido website-->
+      // Seleccionar servicio
+      function seleccionarServicio(e) {
+        e.preventDefault();
+        const card = this.closest('.service-card-item');
+        const serviceName = card.dataset.service;
+        const price = parseInt(card.dataset.price);
+
+        cartItems = [{
+          name: serviceName,
+          price: price,
+          quantity: 1
+        }];
+
+        updateCart();
+        showCart();
+      }
+
+      // Formato de precio
+      function formatPrice(price) {
+        return '$' + price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+      }
+
+      // Actualizar carrito
+      function updateCart() {
+        const listDiv = document.getElementById('selectedServicesList');
         
-                        <div id="galeria" class="container">
-                            <div class="text-center pt-5">
-                              <h2>Promociones fin de año</h2><hr>
-                               <p>Descuentos de Fin de Año <br>
-                                 del 1 al 31 de diciembre <br>
-                                 Aquí en AngieFashion.</p>
-                          </div>
-                                <div class="row">
-                                   <div class="col-lg-4">
-                                     <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones1.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Semipermanente básico manos $30.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones2.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Semipermanente pies básico $30.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones3.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Semipermanente  intermedio uñas natural $35.000  y $40.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones4.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Semipermanente postizas básicas  $45.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones5.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Uñas en Polygel  Postizas largo 1 y 2 $65.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones6.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Uñas en Polygel postizas largo #3 y 4 $ $75.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones9.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Maquillaje, resaltamos tu belleza $ $45.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones10.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Maquillaje cambio tu belleza <br> $ $28.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-                                  <div class="col-lg-4">
-                                    <div class="card" style="width: 18rem;">
-                                        <img src="images/promociones11.jpeg" class="card-img-top" alt="...">
-                                        <div class="card-body">
-                                           <p class="card-text">Cepillados <br>$35.000</p>
-                                        </div>
-                                      </div>
-                                  </div>
-
-
-                                </div>
-                            </div>      
-                                            <!---Footer--->
-             <div class="container">
-                <footer class="text-center text-lg-start bg-light text-muted myfooter">
-                    <!-- Section: Social media -->
-               <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom myredesSocilales">
-                           <!-- Left -->
-                    <div class="me-5 d-none d-lg-block">
-                        <span>Siguenos en:</span>
-                    </div>
-                           
-                   <div class="Iconos-AF">
-                       <a href="" class="me-4 text-reset"><i class="fab fa-facebook-f"></i></a>
-                       <a href="" class="me-4 text-reset"><i class="fab fa-google"></i></a>
-                       <a href="" class="me-4 text-reset"><i class="fab fa-instagram"></i></a>
-                       <a href="" class="me-4 text-reset"><i class="fab fa-whatsapp"></i></a>
-                       
-                   </div>
-                           <!-- Right -->
-               </section>
-                     
-               <section class="">
-                   <div class="container text-center text-md-start mt-5">
-                       <div class="row mt-3">
-                          <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                               <!-- Content -->
-                                <h6 class="text-uppercase fw-bold mb-4">
-                                  Nosostros
-                                </h6>
-                               <p class="Nosotros">Angie Fashion somos una sala belleza integral, donde te brindamos la mejor asesoría en servicios para realzar aún más
-                                   la belleza de nuestra clientas.</p>
-                           </div>
-                               
-                        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                                   <!-- Links -->
-                            <h6 class="text-uppercase fw-bold mb-4">Atención al publico:</h6>
-                            <hr>
-                               <p>
-                                  Lunes a Viernes: 08:30 am A 18:00 pm
-                               </p>
-                               <br>
-                               <p>
-                                   Sabado y Domingo: Turno especiales
-                                </p>
-                                
-                               
-                               
-                           </div>
-
-                       <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                               <!-- Links -->
-                       <h6 class="text-uppercase fw-bold mb-4">Dirección</h6>
-                       <p><i class="fas fa-home me-3"></i>Buenaventura, Colombia</p>
-                       <p><i class="fas fa-envelope me-3"></i>angiefashionraices19@gmail.com</p>
-                       <p><i class="fas fa-phone me-3"></i>+ 57 321 535 3153</p>
-                    </div>
+        if (cartItems.length === 0) {
+          listDiv.innerHTML = '<p style="color: #999; text-align: center;">Selecciona un servicio</p>';
+        } else {
+          listDiv.innerHTML = cartItems.map(item => `
+            <div class="cart-item">
+              <div class="item-name">${item.name}</div>
+              <div class="item-controls">
+                <div class="quantity-control">
+                  <button class="qty-btn" onclick="decreaseQty(${cartItems.indexOf(item)})">−</button>
+                  <input type="number" class="qty-input" value="${item.quantity}" readonly />
+                  <button class="qty-btn" onclick="increaseQty(${cartItems.indexOf(item)})">+</button>
                 </div>
-               </div>
-           </section>
-                          <!-- Copyright -->
-           <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-           © 2021 Copyright:
-           <a class="text-reset fw-bold" href="#!">Derecho reservados :: Angie Fashion :: Colombia 2022</a>
-           </div>
-           <!-- Copyright -->
-       </footer>
-       <!-- Footer -->
+                <button class="btn-remove" onclick="removeItem(${cartItems.indexOf(item)})">✕</button>
+              </div>
+              <div class="item-price">${formatPrice(item.price * item.quantity)}</div>
+            </div>
+          `).join('');
+        }
 
+        calculateTotal();
+      }
 
+      // Aumentar cantidad
+      function increaseQty(index) {
+        if (cartItems[index]) {
+          cartItems[index].quantity += 1;
+          updateCart();
+        }
+      }
 
-             </div>
-               
-                                   
+      // Disminuir cantidad
+      function decreaseQty(index) {
+        if (cartItems[index] && cartItems[index].quantity > 1) {
+          cartItems[index].quantity -= 1;
+          updateCart();
+        }
+      }
 
-                              <!-- Option 1: jQuery and Bootstrap Bundle (includes Popper) -->
-          <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
-            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-            crossorigin="anonymous"></script>
-          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
-            crossorigin="anonymous"></script>
+      // Eliminar item
+      function removeItem(index) {
+        cartItems.splice(index, 1);
+        updateCart();
+        if (cartItems.length === 0) {
+          hideCart();
+        }
+      }
 
-                                            <!--Responsive menu-->
-          <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-          <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      // Calcular total
+      function calculateTotal() {
+        const subtotal = cartItems.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        const discountPercent = parseInt(document.getElementById('discountSelect').value);
+        const discountAmount = Math.floor(subtotal * discountPercent / 100);
+        const total = subtotal - discountAmount;
+
+        document.getElementById('subtotal').textContent = formatPrice(subtotal);
+        
+        if (discountPercent > 0) {
+          document.getElementById('discountAmountRow').style.display = 'flex';
+          document.getElementById('discountAmount').textContent = '-' + formatPrice(discountAmount);
+        } else {
+          document.getElementById('discountAmountRow').style.display = 'none';
+        }
+
+        document.getElementById('totalPrice').textContent = formatPrice(total);
+      }
+
+      // Cambiar descuento
+      document.getElementById('discountSelect').addEventListener('change', calculateTotal);
+
+      // Mostrar carrito
+      function showCart() {
+        document.getElementById('cartPanel').style.display = 'block';
+      }
+
+      // Ocultar carrito
+      function hideCart() {
+        document.getElementById('cartPanel').style.display = 'none';
+      }
+
+      // Cerrar carrito
+      document.getElementById('closeCart').addEventListener('click', hideCart);
+
+      // Reservar servicio
+      function reserveService() {
+        if (cartItems.length === 0) {
+          alert('Por favor selecciona un servicio');
+          return;
+        }
+
+        const serviceName = cartItems[0].name;
+        const total = document.getElementById('totalPrice').textContent;
+        const message = `Hola Angie Fashion, quiero reservar ${serviceName} por ${total}. ¡Gracias!`;
+        const whatsappUrl = `https://api.whatsapp.com/send?phone=573215353153&text=${encodeURIComponent(message)}`;
+        
+        window.open(whatsappUrl, '_blank');
+      }
+
+      // Cargar promociones al abrir la página
+      cargarPromociones();
+    </script>
+
+    <style>
+      /* Estilos del carrito flotante */
+      .services-cart {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 320px;
+        background: var(--white);
+        border-radius: 15px;
+        box-shadow: 0 10px 40px rgba(27, 13, 45, 0.2);
+        z-index: 1000;
+        max-height: 80vh;
+        display: flex;
+        flex-direction: column;
+        animation: slideIn 0.3s ease;
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(400px);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      .cart-header {
+        background: var(--dark);
+        color: white;
+        padding: 1rem;
+        border-radius: 15px 15px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cart-header h4 {
+        margin: 0;
+        font-weight: 700;
+      }
+
+      .btn-close-cart {
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        padding: 0;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .btn-close-cart:hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+      }
+
+      .cart-body {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+      }
+
+      .cart-item {
+        background: var(--light);
+        padding: 0.75rem;
+        border-radius: 10px;
+        margin-bottom: 0.75rem;
+        font-size: 0.9rem;
+      }
+
+      .item-name {
+        font-weight: 600;
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+      }
+
+      .item-controls {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .quantity-control {
+        display: flex;
+        align-items: center;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+      }
+
+      .qty-btn {
+        background: white;
+        border: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        font-weight: bold;
+        color: var(--primary);
+        transition: background 0.2s;
+      }
+
+      .qty-btn:hover {
+        background: var(--light);
+      }
+
+      .qty-input {
+        border: none;
+        width: 40px;
+        text-align: center;
+        background: white;
+        font-weight: 600;
+      }
+
+      .btn-remove {
+        background: #ff6b6b;
+        border: none;
+        color: white;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.2s;
+      }
+
+      .btn-remove:hover {
+        background: #ff5252;
+      }
+
+      .item-price {
+        text-align: right;
+        font-weight: 700;
+        color: var(--primary);
+      }
+
+      .cart-summary {
+        border-top: 1px solid #eee;
+        padding-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .summary-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        color: var(--muted);
+      }
+
+      .summary-row.total {
+        border-top: 2px solid var(--primary);
+        padding-top: 0.75rem;
+        margin-top: 0.75rem;
+        font-weight: 700;
+        color: var(--dark);
+        font-size: 1.1rem;
+      }
+
+      .summary-row select {
+        margin-left: auto;
+        max-width: 150px;
+      }
+
+      #discountSelect {
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 0.35rem;
+      }
+
+      @media (max-width: 576px) {
+        .services-cart {
+          right: 10px;
+          bottom: 10px;
+          width: 280px;
+          max-height: 70vh;
+        }
+      }
+    </style>
   </body>
 </html>

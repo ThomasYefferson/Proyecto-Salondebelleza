@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Perfil - Angie Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/76e80e420f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <header>
+      <div class="topbar py-2">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="topbar-info text-center text-md-left mb-2 mb-md-0">
+            <span class="topbar-label">Mi Perfil</span>
+            <a href="tel:3215353153">321 535 3153</a>
+          </div>
+          <a class="topbar-action" href="index.html">← Volver al sitio</a>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark menu-bar sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img id="logo-AF" src="images/logo.PNG" alt="Angie Fashion" /></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+              <li class="nav-item"><a class="nav-link" href="promociones.html">Promociones</a></li>
+              <li class="nav-item"><a class="nav-link" href="Nuestro-trabajo.html">Nuestro trabajo</a></li>
+              <li class="nav-item"><a class="nav-link" href="#" onclick="cerrarSesion(event)">Cerrar sesión</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="py-5">
+      <div class="container" style="max-width:720px;">
+        <div class="perfil-section shadow-sm p-4 rounded bg-white">
+          <h3 class="mb-3">Tu información</h3>
+          <div class="perfil-row">
+            <div class="perfil-field">
+              <label>Nombre</label>
+              <p id="perfilNombre">-</p>
+            </div>
+            <div class="perfil-field">
+              <label>Apellido</label>
+              <p id="perfilApellido">-</p>
+            </div>
+          </div>
+          <div class="perfil-row">
+            <div class="perfil-field">
+              <label>Email</label>
+              <p id="perfilEmail">-</p>
+            </div>
+            <div class="perfil-field">
+              <label>Celular</label>
+              <p id="perfilCelular">-</p>
+            </div>
+          </div>
+          <div class="perfil-row">
+            <div class="perfil-field">
+              <label>Fecha de registro</label>
+              <p id="perfilFecha">-</p>
+            </div>
+          </div>
+
+          <div class="mt-3 d-flex gap-2">
+            <a href="promociones.html" class="btn btn-outline-primary">Ver promociones</a>
+            <button class="btn btn-secondary" onclick="cerrarSesion(event)">Cerrar sesión</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-5 text-white mt-5">
+      <div class="container text-center">
+        <p>© 2024 Angie Fashion - Todos los derechos reservados</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+
+    <script>
+      // Verificar que el usuario esté autenticado (no admin-only)
+      function verificarAutenticacion() {
+        const sesion = localStorage.getItem("sesionActual");
+        if (!sesion) {
+          alert("Debes iniciar sesión para ver tu perfil");
+          window.location.href = "login.html";
+          return false;
+        }
+        const usuario = JSON.parse(sesion);
+        mostrarDatos(usuario);
+        return true;
+      }
+
+      function mostrarDatos(usuario) {
+        document.getElementById('perfilNombre').textContent = usuario.nombre || '-';
+        document.getElementById('perfilApellido').textContent = usuario.apellido || '-';
+        document.getElementById('perfilEmail').textContent = usuario.email || '-';
+        document.getElementById('perfilCelular').textContent = usuario.celular || '-';
+
+        const usuariosStorage = localStorage.getItem("usuarios");
+        if (usuariosStorage) {
+          const usuarios = JSON.parse(usuariosStorage);
+          const usuarioCompleto = usuarios.find(u => u.id === usuario.id);
+          if (usuarioCompleto) {
+            document.getElementById('perfilFecha').textContent = usuarioCompleto.fechaRegistro || '-';
+          }
+        }
+      }
+
+      function cerrarSesion(e) {
+        if (e) e.preventDefault();
+        if (confirm('¿Cerrar sesión?')) {
+          localStorage.removeItem('sesionActual');
+          window.location.href = 'index.html';
+        }
+      }
+
+      // Ejecutar
+      verificarAutenticacion();
+    </script>
+  </body>
+</html>

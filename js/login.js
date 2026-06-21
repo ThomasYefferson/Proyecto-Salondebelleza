@@ -1,38 +1,69 @@
-var baseDatos = []
+// ===== GESTIÓN DE LOGIN CON localStorage =====
+let baseDatos = [];
 
-var limpiar = function() {
-    var email = document.getElementById('email').value = ""
-    var password = document.getElementById('password').value = ""
-
-    
+// Cargar datos al iniciar
+function CargarDatos() {
+  const datos = localStorage.getItem("usuarios");
+  if (datos) {
+    baseDatos = JSON.parse(datos);
+  } else {
+    baseDatos = [];
+  }
 }
-var CargarDatos = function(){
-    var Misdatos = localStorage.getItem("base")
-    if(Misdatos == null){
-        baseDatos = []
 
-    }
-    else{
-        baseDatos = JSON.parse(Misdatos)
-    }
+// Limpiar formulario
+function limpiar() {
+  document.getElementById('email').value = "";
+  document.getElementById('password').value = "";
 }
-limpiar()
-var Iniciar = function(){
-    var email = document.getElementById('email').value;
-    var password = document.getElementById('password').value;
-    
-    var posicion = baseDatos.findIndex((item) => item.mail == email && item.pass == password)
-    console.log(posicion)
 
-    var msj = document.getElementById('mensaje')
-    if(posicion == -1){
-        msj.innerHTML = "<div class='alert alert-danger' role='alert'> Usuario invalido </div>"
+// Función de login
+function Iniciar() {
+  const email = document.getElementById('email').value.trim();
+  const password = document.getElementById('password').value;
+  const mensajeDiv = document.getElementById('mensaje');
 
-    }
-    else{
-        msj.innerHTML = "<div class='alert alert-success' role='alert'> Bienvenid@ "+baseDatos[posicion].name +" </div>"
-    }      
-    
+  if (!email || !password) {
+    mostrarMensajeLogin(mensajeDiv, "Email y contraseña son obligatorios", "error");
+    return;
+  }
+
+  // Buscar usuario
+  const usuario = baseDatos.find(user => user.email === email && user.password === password);
+
+  if (!usuario) {
+    mostrarMensajeLogin(mensajeDiv, "Email o contraseña incorrectos", "error");
+    return;
+  }
+
+  // Guardar sesión
+  const sesion = {
+    id: usuario.id,
+    nombre: usuario.nombre,
+    apellido: usuario.apellido,
+    email: usuario.email,
+    isAdmin: usuario.isAdmin,
+    loginTime: new Date().toLocaleString('es-CO')
+  };
+
+  localStorage.setItem("sesionActual", JSON.stringify(sesion));
+
+  mostrarMensajeLogin(mensajeDiv, `¡Bienvenido ${usuario.nombre}!`, "success");
+  limpiar();
+
+  setTimeout(() => {
+    window.location.href = "index.html";
+  }, 1500);
 }
-CargarDatos()
-limpiar()
+
+// Mostrar mensajes
+function mostrarMensajeLogin(elemento, texto, tipo) {
+  elemento.innerHTML = `<div class="alert alert-${tipo === "error" ? "danger" : "success"}">${texto}</div>`;
+  setTimeout(() => {
+    elemento.innerHTML = "";
+  }, 4000);
+}
+
+// Cargar datos al abrir la página
+CargarDatos();
+limpiar();

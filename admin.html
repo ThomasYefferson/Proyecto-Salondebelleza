@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Panel Admin - Angie Fashion</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
+    <script src="https://kit.fontawesome.com/76e80e420f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      .admin-container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 0 15px;
+      }
+
+      .admin-header {
+        background: var(--dark);
+        color: white;
+        padding: 2rem;
+        border-radius: 15px;
+        margin-bottom: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .admin-header h1 {
+        margin: 0;
+        font-size: 2rem;
+      }
+
+      .btn-logout {
+        background: var(--secondary);
+        color: var(--dark);
+        padding: 0.75rem 1.5rem;
+        border-radius: 50px;
+        border: none;
+        font-weight: 700;
+        cursor: pointer;
+        transition: all 0.3s;
+      }
+
+      .btn-logout:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 5px 15px rgba(255, 96, 215, 0.3);
+      }
+
+      .tab-content {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 5px 20px rgba(27, 13, 45, 0.1);
+      }
+
+      .form-section {
+        background: var(--light);
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin-bottom: 2rem;
+      }
+
+      .form-section h3 {
+        color: var(--dark);
+        margin-bottom: 1rem;
+        font-weight: 700;
+      }
+
+      .promo-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .promo-item {
+        background: white;
+        border: 2px solid #eee;
+        border-radius: 12px;
+        padding: 1rem;
+        transition: all 0.3s;
+      }
+
+      .promo-item:hover {
+        border-color: var(--primary);
+        box-shadow: 0 8px 25px rgba(125, 42, 232, 0.15);
+      }
+
+      .promo-item h5 {
+        color: var(--dark);
+        margin-bottom: 0.5rem;
+      }
+
+      .promo-item p {
+        color: var(--primary);
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin: 0.5rem 0;
+      }
+
+      .promo-actions {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+
+      .btn-small {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+
+      .btn-edit {
+        background: var(--primary);
+        color: white;
+      }
+
+      .btn-edit:hover {
+        background: #6a1bb5;
+      }
+
+      .btn-delete {
+        background: #ff6b6b;
+        color: white;
+      }
+
+      .btn-delete:hover {
+        background: #ff5252;
+      }
+
+      .alert-custom {
+        border-radius: 10px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+      }
+
+      .users-table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .users-table th {
+        background: var(--dark);
+        color: white;
+        padding: 1rem;
+        text-align: left;
+        font-weight: 700;
+      }
+
+      .users-table td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #eee;
+      }
+
+      .users-table tr:hover {
+        background: var(--light);
+      }
+
+      .badge-admin {
+        background: var(--primary);
+        color: white;
+        padding: 0.4rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.75rem;
+      }
+
+      .no-content {
+        text-align: center;
+        padding: 2rem;
+        color: var(--muted);
+      }
+
+      @media (max-width: 768px) {
+        .admin-header {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .admin-header h1 {
+          margin-bottom: 1rem;
+        }
+
+        .promo-list {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="topbar py-2">
+        <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="topbar-info text-center text-md-left mb-2 mb-md-0">
+            <span class="topbar-label">Panel Administrativo</span>
+            <a href="tel:3215353153">321 535 3153</a>
+          </div>
+          <a class="topbar-action" href="index.html">← Volver al sitio</a>
+        </div>
+      </div>
+      <nav class="navbar navbar-expand-lg navbar-dark menu-bar sticky-top">
+        <div class="container">
+          <a class="navbar-brand" href="index.html"><img id="logo-AF" src="images/logo.PNG" alt="Angie Fashion" /></a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <div class="admin-container">
+        <div class="admin-header">
+          <div>
+            <h1>Panel Administrativo</h1>
+            <p id="infoAdmin" style="margin: 0; opacity: 0.9;"></p>
+          </div>
+          <button class="btn-logout" onclick="cerrarSesionAdmin()">Cerrar sesión</button>
+        </div>
+
+        <!-- Tabs -->
+        <ul class="nav nav-tabs mb-4" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="promo-tab" data-toggle="tab" href="#promo" role="tab">Gestionar Promociones</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="users-tab" data-toggle="tab" href="#users" role="tab">Usuarios</button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content">
+          <!-- Promociones Tab -->
+          <div class="tab-pane fade show active" id="promo" role="tabpanel">
+            <div class="form-section">
+              <h3>Agregar/Editar Promoción</h3>
+              <form id="promoForm">
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="promoNombre">Nombre del servicio</label>
+                    <input type="text" class="form-control" id="promoNombre" placeholder="Ej. Semipermanente manos" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="promoPrecio">Precio</label>
+                    <input type="number" class="form-control" id="promoPrecio" placeholder="Ej. 30000" required>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="promoImagen">URL de imagen</label>
+                    <input type="text" class="form-control" id="promoImagen" placeholder="Ej. images/promociones1.jpeg">
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label for="promoDescripcion">Descripción</label>
+                    <input type="text" class="form-control" id="promoDescripcion" placeholder="Descripción corta">
+                  </div>
+                </div>
+                <div id="promoMensaje"></div>
+                <button type="submit" class="btn btn-primary">Guardar Promoción</button>
+              </form>
+            </div>
+
+            <h4>Promociones actuales</h4>
+            <div class="promo-list" id="promoList">
+              <div class="no-content">Cargando promociones...</div>
+            </div>
+          </div>
+
+          <!-- Usuarios Tab -->
+          <div class="tab-pane fade" id="users" role="tabpanel">
+            <h4>Lista de usuarios registrados</h4>
+            <table class="users-table">
+              <thead>
+                <tr>
+                  <th>Nombre</th>
+                  <th>Email</th>
+                  <th>Celular</th>
+                  <th>Fecha Registro</th>
+                  <th>Rol</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody id="usersTable">
+                <tr><td colspan="6" class="text-center">Cargando usuarios...</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer py-5 text-white mt-5">
+      <div class="container text-center">
+        <p>Panel Administrativo - Angie Fashion</p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+    <script src="js/admin.js"></script>
+  </body>
+</html>
